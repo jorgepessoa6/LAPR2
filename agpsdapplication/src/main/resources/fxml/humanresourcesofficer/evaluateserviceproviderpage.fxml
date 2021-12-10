@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="700.0" prefWidth="950.0"
+            stylesheets="@../../css/usecases.css" xmlns="http://javafx.com/javafx/8"
+            fx:controller="lapr2.agpsdapplication.controller.humanresourcesofficer.EvaluateServiceProviderPage">
+    <padding>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0"/>
+    </padding>
+    <children>
+        <BorderPane prefHeight="700.0" prefWidth="950.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <VBox fillWidth="false" spacing="15.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <VBox fillWidth="false" spacing="5.0">
+                            <children>
+                                <FlowPane>
+                                    <children>
+                                        <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../images/users/profile.png"/>
+                                            </image>
+                                            <FlowPane.margin>
+                                                <Insets right="5.0"/>
+                                            </FlowPane.margin>
+                                        </ImageView>
+                                        <Label text="Service provider"/>
+                                    </children>
+                                </FlowPane>
+                                <ComboBox fx:id="cmbServiceProvider" onAction="#onSelectServiceProvider"
+                                          prefWidth="400.0" promptText="Service provider"/>
+                            </children>
+                        </VBox>
+                        <HBox stylesheets="@../../css/homepage.css">
+                            <children>
+                                <AnchorPane prefHeight="140.0" prefWidth="400.0" styleClass="info-pane">
+                                    <children>
+                                        <VBox prefHeight="185.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0"
+                                              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                              AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <FlowPane alignment="CENTER" styleClass="info-pane-title">
+                                                    <children>
+                                                        <ImageView fitHeight="150.0" fitWidth="20.0" pickOnBounds="true"
+                                                                   preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../../images/users/rating.png"/>
+                                                            </image>
+                                                        </ImageView>
+                                                        <Label text="Rating analysis"/>
+                                                    </children>
+                                                </FlowPane>
+                                                <AnchorPane styleClass="info-pane-content">
+                                                    <children>
+                                                        <VBox prefHeight="155.0" prefWidth="200.0" spacing="15.0"
+                                                              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                                              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                            <children>
+                                                                <HBox>
+                                                                    <children>
+                                                                        <VBox layoutX="10.0" layoutY="10.0"
+                                                                              spacing="5.0">
+                                                                            <children>
+                                                                                <FlowPane alignment="CENTER_LEFT"
+                                                                                          layoutX="10.0" layoutY="10.0">
+                                                                                    <children>
+                                                                                        <ImageView fitWidth="20.0"
+                                                                                                   pickOnBounds="true"
+                                                                                                   preserveRatio="true">
+                                                                                            <image>
+                                                                                                <Image url="@../../images/users/userlist.png"/>
+                                                                                            </image>
+                                                                                        </ImageView>
+                                                                                        <Label text="Population"/>
+                                                                                    </children>
+                                                                                    <VBox.margin>
+                                                                                        <Insets/>
+                                                                                    </VBox.margin>
+                                                                                </FlowPane>
+                                                                                <FlowPane layoutX="10.0" layoutY="30.0">
+                                                                                    <children>
+                                                                                        <ImageView fitWidth="20.0"
+                                                                                                   pickOnBounds="true"
+                                                                                                   preserveRatio="true">
+                                                                                            <image>
+                                                                                                <Image url="@../../images/users/itemtag.png"/>
+                                                                                            </image>
+                                                                                        </ImageView>
+                                                                                        <Label fx:id="lblPopulationMean"
+                                                                                               style="-fx-font-weight: 500;"
+                                                                                               text="Mean:"/>
+                                                                                    </children>
+                                                                                </FlowPane>
+                                                                                <FlowPane layoutX="10.0" layoutY="50.0">
+                                                                                    <children>
+                                                                                        <ImageView fitWidth="20.0"
+                                                                                                   pickOnBounds="true"
+                                                                                                   preserveRatio="true">
+                                                                                            <image>
+                                                                                                <Image url="@../../images/users/itemtag.png"/>
+                                                                                            </image>
+                                                                                        </ImageView>
+                                                                                        <Label fx:id="lblPopulationStd"
+                                                                                               style="-fx-font-weight: 500;"
+                                                                                               text="Standard deviation:"/>
+                                                                                    </children>
+                                                                                </FlowPane>
+                                                                            </children>
+                                                                        </VBox>
+                                                                        <VBox spacing="5.0">
+                                                                            <children>
+                                                                                <FlowPane alignment="CENTER_LEFT"
+                                                                                          layoutX="10.0" layoutY="10.0">
+                                                                                    <children>
+                                                                                        <ImageView fitWidth="20.0"
+                                                                                                   pickOnBounds="true"
+                                                                                                   preserveRatio="true">
+                                                                                            <image>
+                                                                                                <Image url="@../../images/users/userlist.png"/>
+                                                                                            </image>
+                                                                                        </ImageView>
+                                                                                        <Label text="Service provider"/>
+                                                                                    </children>
+                                                                                    <VBox.margin>
+                                                                                        <Insets/>
+                                                                                    </VBox.margin>
+                                                                                </FlowPane>
+                                                                                <FlowPane layoutX="10.0" layoutY="30.0">
+                                                                                    <children>
+                                                                                        <ImageView fitWidth="20.0"
+                                                                                                   pickOnBounds="true"
+                                                                                                   preserveRatio="true">
+                                                                                            <image>
+                                                                                                <Image url="@../../images/users/itemtag.png"/>
+                                                                                            </image>
+                                                                                        </ImageView>
+                                                                                        <Label fx:id="lblServiceProviderMean"
+                                                                                               style="-fx-font-weight: 500;"
+                                                                                               text="Mean:"/>
+                                                                                    </children>
+                                                                                </FlowPane>
+                                                                                <FlowPane layoutX="10.0" layoutY="50.0">
+                                                                                    <children>
+                                                                                        <ImageView fitWidth="20.0"
+                                                                                                   pickOnBounds="true"
+                                                                                                   preserveRatio="true">
+                                                                                            <image>
+                                                                                                <Image url="@../../images/users/itemtag.png"/>
+                                                                                            </image>
+                                                                                        </ImageView>
+                                                                                        <Label fx:id="lblServiceProviderStd"
+                                                                                               style="-fx-font-weight: 500;"
+                                                                                               text="Standard deviation:"/>
+                                                                                    </children>
+                                                                                </FlowPane>
+                                                                            </children>
+                                                                        </VBox>
+                                                                    </children>
+                                                                </HBox>
+                                                                <HBox spacing="10.0">
+                                                                    <children>
+                                                                        <ComboBox fx:id="cmbLabel" prefHeight="30.0"
+                                                                                  prefWidth="300.0"
+                                                                                  promptText="Suggested label: Outstanding Providers"/>
+                                                                        <Button fx:id="btnChange"
+                                                                                mnemonicParsing="false"
+                                                                                onAction="#onEvaluate" text="Change"/>
+                                                                    </children>
+                                                                </HBox>
+                                                                <Label fx:id="lblWarnings"
+                                                                       style="-fx-text-fill: rgba(255, 50, 10, 0.8);"
+                                                                       textFill="WHITE"/>
+                                                            </children>
+                                                        </VBox>
+                                                    </children>
+                                                    <padding>
+                                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                                                    </padding>
+                                                </AnchorPane>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </top>
+            <bottom>
+                <BarChart fx:id="barChart" barGap="0.0" categoryGap="0.0" legendVisible="false" prefHeight="350.0"
+                          BorderPane.alignment="CENTER">
+                    <xAxis>
+                        <CategoryAxis fx:id="categoryAxis" label="Rating" side="BOTTOM"/>
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis fx:id="numberAxis" label="Number of reviews" minorTickCount="0" side="LEFT"
+                                    tickLength="10.0" tickMarkVisible="false" tickUnit="30.0"/>
+                    </yAxis>
+                    <BorderPane.margin>
+                        <Insets/>
+                    </BorderPane.margin>
+                </BarChart>
+            </bottom>
+        </BorderPane>
+    </children>
+</AnchorPane>

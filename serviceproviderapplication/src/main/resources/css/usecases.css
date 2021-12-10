@@ -1,0 +1,245 @@
+.text-field {
+    -fx-font-size: 14px;
+    -fx-background-radius: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 20, 0, 0, 0);
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: rgba(255, 255, 255, 0.65);
+}
+
+.text-area .content {
+    -fx-font-size: 14px;
+    -fx-background-radius: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 20, 0, 0, 0);
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: rgba(255, 255, 255, 0.65);
+}
+
+.combo-box {
+    -fx-background-radius: 0;
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 20, 0, 0, 0);
+    -fx-font-size: 14px;
+}
+
+.combo-box .list-cell {
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+}
+
+.combo-box-popup .list-view .list-cell {
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+}
+
+.combo-box-popup .list-view .list-cell:hover {
+    -fx-background-color: rgba(180, 140, 45, 0.5);
+}
+
+.label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.button {
+    -fx-background-color: rgba(180, 140, 45, 0.5);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 20, 0, 0, 0);
+    -fx-font-size: 14px;
+    -fx-background-radius: 0;
+    -fx-text-fill: white;
+    -fx-cursor: HAND;
+}
+
+.button:pressed {
+    -fx-background-color: rgba(180, 140, 45, 0.7);
+}
+
+.warnings-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: rgba(255, 50, 10, 0.8);
+}
+
+.table-view {
+    -fx-background-color: transparent;
+    -fx-table-cell-border-color: transparent;
+}
+
+.corner {
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+}
+
+.table-view:focused {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+}
+
+.table-view .column-header-background .label {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell {
+    -fx-text-fill: white;
+}
+
+.table-row-cell {
+    -fx-table-cell-border-color: transparent;
+    -fx-background-color: rgba(0, 0, 0, 0.3);
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:odd {
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+    -fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:selected {
+    -fx-background-color: rgba(60, 90, 40, 0.3);;
+}
+
+.table-row-cell:selected:odd {
+    -fx-background-color: rgba(60, 90, 40, 0.2);;
+}
+
+.table-view *.increment-button,
+.table-view *.decrement-button,
+.table-view *.increment-arrow,
+.table-view *.decrement-arrow {
+    -fx-padding: 0;
+    -fx-shape: "";
+}
+
+.date-picker {
+    -fx-background-radius: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 20, 0, 0, 0);
+    -fx-background-color: rgba(0, 0, 0, 0.4);
+    -fx-background-insets: 0;
+}
+
+.date-picker > .text-field {
+    -fx-effect: none;
+    -fx-all: initial;
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-background-size: 40%;
+}
+
+.date-picker > .text-field:focused {
+    -fx-background-color: none;
+}
+
+.date-picker:editable > .arrow-button > * {
+    -fx-opacity: 0; /* Set the node in the button to be visible */
+}
+
+.date-picker-popup > * > .spinner {
+    -fx-spacing: 0.25em; /* 3 */
+    -fx-alignment: CENTER;
+    -fx-fill-height: false;
+    -fx-background-color: transparent;
+}
+
+.date-picker-popup > * > .spinner > .button {
+    -fx-background-color: -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0, 1, 2;
+    -fx-color: transparent;
+    -fx-background-radius: 0;
+}
+
+.slider:vertical .track {
+    -fx-pref-width: 5px;
+}
+
+.slider .thumb {
+    -fx-pref-height: 12px;
+    -fx-pref-width: 12px;
+    -fx-background-color: rgba(255, 255, 255, 0.8);
+}
+
+.slider .axis {
+    -fx-tick-label-fill: rgba(255, 255, 255, 0.7);
+}
+
+.slider .axis .axis-tick-mark, .slider .axis .axis-minor-tick-mark {
+    -fx-fill: null;
+    -fx-stroke: rgba(255, 255, 255, 0.7);
+}
+
+.slider .track {
+    -fx-pref-height: 5px;
+    -fx-background-color: rgba(0, 0, 0, 0.7);
+}
+
+.axis {
+    -fx-font-size: 1.4em;
+    -fx-tick-label-fill: white;
+}
+
+.axis-label {
+    -fx-text-fill: white;
+}
+
+.chart-plot-background {
+    -fx-background-color: rgba(0, 0, 0, 0.4);
+}
+
+.chart-horizontal-grid-lines {
+    -fx-stroke: rgba(255, 255, 255, 0.7);
+}
+
+.chart-vertical-grid-lines {
+    -fx-stroke: transparent;
+    -fx-stroke-width: 0;
+}
+
+.axis-tick-mark {
+    -fx-stroke: white;
+}
+
+.axis-minor-tick-mark {
+    -fx-stroke: white;
+}
+
+.big-label {
+    -fx-font-size: 25;
+    -fx-margin: 20px;
+}
+
+.progress-indicator {
+    -fx-margin: 0, 0, 10px, 0;
+    -fx-progress-color: white;
+}
+
+.progress-indicator .percentage {
+    -fx-fill: null;
+}
+
+.radio-button {
+    -fx-text-fill: white;
+}
+
+.titled-pane {
+    -fx-text-fill: white;
+}
+
+.titled-pane .content {
+    -fx-font-size: 15px;
+    -fx-background-color: grey;
+}

@@ -1,0 +1,44 @@
+.content-pane {
+    -fx-background-color: white;
+}
+
+.menu-pane {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 20, 0, 0, 0);
+}
+
+.menu-pane .label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+
+.menu-option {
+    -fx-background-color: rgba(0, 0, 0, 0.3);
+}
+
+.menu-option:hover {
+    -fx-background-color: rgba(0, 0, 0, 0.7);
+}
+
+.menu-option-separator {
+    -fx-background-color: rgba(130, 90, 40, 0.2);
+}
+
+.selected {
+    -fx-background-color: rgba(0, 0, 0, 0.7);
+    -fx-border-color: rgb(180, 140, 45);
+    -fx-border-style: solid;
+    -fx-border-width: 0px 0px 0px 2px;
+}
+
+.user-icon-pane {
+    -fx-border-color: rgba(0, 0, 0, 0.5);
+    -fx-border-style: solid;
+    -fx-border-width: 0px 0px 2px 0px;
+}
+
+.user-icon-pane .label {
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+

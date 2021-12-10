@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="700.0" prefWidth="950.0"
+            stylesheets="@../../css/usecases.css" xmlns="http://javafx.com/javafx/8"
+            fx:controller="lapr2.agpsdapplication.controller.administrator.ViewGeographicalAreasController">
+    <children>
+        <TableView fx:id="tableViewGeographicalAreas" prefHeight="700.0" prefWidth="950.0" AnchorPane.bottomAnchor="0.0"
+                   AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <columns>
+                <TableColumn fx:id="tableColumnDesignation" editable="false" maxWidth="250.0" minWidth="250.0"
+                             prefWidth="250.0" resizable="false" text="Designation"/>
+                <TableColumn fx:id="tableColumnPostCode" editable="false" maxWidth="250.0" minWidth="250.0"
+                             prefWidth="250.0" resizable="false" text="Post Code"/>
+                <TableColumn fx:id="tableColumnRadius" editable="false" maxWidth="195.0" minWidth="195.0"
+                             prefWidth="195.0" resizable="false" text="Radius"/>
+                <TableColumn fx:id="tableColumnTravelCost" editable="false" maxWidth="195.0" minWidth="195.0"
+                             prefWidth="195.0" resizable="false" text="Travel Cost"/>
+            </columns>
+        </TableView>
+    </children>
+    <padding>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0"/>
+    </padding>
+</AnchorPane>

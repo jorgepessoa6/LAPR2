@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="700.0" prefWidth="950.0" stylesheets="@../../css/usecases.css"
+            xmlns="http://javafx.com/javafx/8"
+            fx:controller="lapr2.agpsdapplication.controller.client.RequestServiceController">
+    <children>
+        <VBox fillWidth="false" prefHeight="700.0" prefWidth="950.0" spacing="15.0" AnchorPane.bottomAnchor="0.0"
+              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox fx:id="boxPostalAddress" spacing="5.0">
+                    <children>
+                        <FlowPane>
+                            <children>
+                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/users/address.png"/>
+                                    </image>
+                                    <FlowPane.margin>
+                                        <Insets right="5.0"/>
+                                    </FlowPane.margin>
+                                </ImageView>
+                                <Label text="Postal address"/>
+                            </children>
+                        </FlowPane>
+                        <ComboBox fx:id="cmbPostalAddresses" onAction="#onSelectPostalAddress" prefWidth="400.0"
+                                  promptText="Postal address"/>
+                    </children>
+                </VBox>
+                <VBox fx:id="boxDescription" disable="true" fillWidth="false" spacing="15.0">
+                    <children>
+                        <VBox spacing="5.0">
+                            <children>
+                                <FlowPane>
+                                    <children>
+                                        <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../images/users/category.png"/>
+                                            </image>
+                                            <FlowPane.margin>
+                                                <Insets right="5.0"/>
+                                            </FlowPane.margin>
+                                        </ImageView>
+                                        <Label text="Category"/>
+                                    </children>
+                                </FlowPane>
+                                <ComboBox fx:id="cmbCategory" onAction="#onSelectCategory" prefWidth="250.0"
+                                          promptText="Category"/>
+                            </children>
+                        </VBox>
+                        <VBox spacing="5.0">
+                            <children>
+                                <FlowPane prefWrapLength="300.0">
+                                    <children>
+                                        <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../images/users/service.png"/>
+                                            </image>
+                                            <FlowPane.margin>
+                                                <Insets right="5.0"/>
+                                            </FlowPane.margin>
+                                        </ImageView>
+                                        <Label text="Service"/>
+                                    </children>
+                                </FlowPane>
+                                <HBox spacing="30.0">
+                                    <children>
+                                        <ComboBox fx:id="cmbService" onAction="#onSelectService" prefWidth="250.0"
+                                                  promptText="Service"/>
+                                        <TextField fx:id="txtServiceDescription" prefWidth="500.0"
+                                                   promptText="Service Description"/>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                        <HBox spacing="30.0">
+                            <children>
+                                <VBox spacing="15.0">
+                                    <children>
+                                        <VBox fx:id="boxDuration" spacing="5.0">
+                                            <children>
+                                                <FlowPane prefWrapLength="250.0">
+                                                    <children>
+                                                        <ImageView fitWidth="20.0" pickOnBounds="true"
+                                                                   preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../../images/users/clock.png"/>
+                                                            </image>
+                                                            <FlowPane.margin>
+                                                                <Insets right="5.0"/>
+                                                            </FlowPane.margin>
+                                                        </ImageView>
+                                                        <Label text="Duration"/>
+                                                    </children>
+                                                </FlowPane>
+                                                <Slider fx:id="sldDuration" blockIncrement="0.5" majorTickUnit="1.0"
+                                                        max="18.0" minorTickCount="1" showTickLabels="true"
+                                                        showTickMarks="true" snapToTicks="true"/>
+                                            </children>
+                                        </VBox>
+                                        <FlowPane hgap="20.0" prefWrapLength="250.0">
+                                            <children>
+                                                <Button mnemonicParsing="false" onAction="#onAddService"
+                                                        text="Add service"/>
+                                                <Button mnemonicParsing="false" onAction="#onConfirmServices"
+                                                        text="Confirm services"/>
+                                            </children>
+                                        </FlowPane>
+                                        <VBox spacing="5.0">
+                                            <children>
+                                                <FlowPane prefWrapLength="200.0">
+                                                    <children>
+                                                        <ImageView fitWidth="20.0" pickOnBounds="true"
+                                                                   preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../../images/users/money.png"/>
+                                                            </image>
+                                                            <FlowPane.margin>
+                                                                <Insets right="5.0"/>
+                                                            </FlowPane.margin>
+                                                        </ImageView>
+                                                        <Label text="Total cost"/>
+                                                    </children>
+                                                </FlowPane>
+                                                <TextField fx:id="txtTotalCost" editable="false"/>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </VBox>
+                                <VBox spacing="5.0">
+                                    <children>
+                                        <FlowPane prefWrapLength="250.0">
+                                            <children>
+                                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../images/users/service.png"/>
+                                                    </image>
+                                                    <FlowPane.margin>
+                                                        <Insets right="5.0"/>
+                                                    </FlowPane.margin>
+                                                </ImageView>
+                                                <Label text="Services"/>
+                                            </children>
+                                        </FlowPane>
+                                        <TableView fx:id="tableServices" prefHeight="180.0" prefWidth="500.0">
+                                            <columns>
+                                                <TableColumn fx:id="columnService" editable="false" maxWidth="160.0"
+                                                             minWidth="160.0" prefWidth="160.0" resizable="false"
+                                                             text="Service"/>
+                                                <TableColumn fx:id="columnCategory" editable="false" maxWidth="100.0"
+                                                             minWidth="100.0" prefWidth="100.0" resizable="false"
+                                                             text="Category"/>
+                                                <TableColumn fx:id="columnServiceDescription" editable="false"
+                                                             maxWidth="165.0" minWidth="165.0" prefWidth="165.0"
+                                                             resizable="false" text="Service description"/>
+                                                <TableColumn fx:id="columnDuration" editable="false" maxWidth="75.0"
+                                                             minWidth="75.0" prefWidth="75.0" resizable="false"
+                                                             text="Duration"/>
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <HBox fx:id="boxSchedules" disable="true" prefWidth="890.0" spacing="30.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <VBox fillWidth="false" spacing="15.0">
+                            <children>
+                                <VBox spacing="5.0">
+                                    <children>
+                                        <FlowPane prefWrapLength="250.0">
+                                            <children>
+                                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../images/users/calendar.png"/>
+                                                    </image>
+                                                    <FlowPane.margin>
+                                                        <Insets right="5.0"/>
+                                                    </FlowPane.margin>
+                                                </ImageView>
+                                                <Label text="Date"/>
+                                            </children>
+                                        </FlowPane>
+                                        <DatePicker fx:id="datePicker" editable="false" maxHeight="-Infinity"
+                                                    maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                                                    prefWidth="250.0" promptText="Date" AnchorPane.bottomAnchor="500.0"
+                                                    AnchorPane.leftAnchor="492.0" AnchorPane.rightAnchor="180.0"
+                                                    AnchorPane.topAnchor="150.0"/>
+                                    </children>
+                                </VBox>
+                                <VBox spacing="5.0">
+                                    <children>
+                                        <FlowPane prefWrapLength="250.0">
+                                            <children>
+                                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../images/users/clock.png"/>
+                                                    </image>
+                                                    <FlowPane.margin>
+                                                        <Insets right="5.0"/>
+                                                    </FlowPane.margin>
+                                                </ImageView>
+                                                <Label text="Hour"/>
+                                            </children>
+                                        </FlowPane>
+                                        <Slider fx:id="sldHour" blockIncrement="0.5" layoutX="441.0" layoutY="211.0"
+                                                majorTickUnit="1.0" max="24.0" min="6.0" minorTickCount="1"
+                                                showTickLabels="true" showTickMarks="true" snapToTicks="true"
+                                                AnchorPane.bottomAnchor="460.0" AnchorPane.leftAnchor="492.0"
+                                                AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="270.0"/>
+                                    </children>
+                                </VBox>
+                                <VBox spacing="15.0">
+                                    <children>
+                                        <FlowPane alignment="BOTTOM_LEFT" prefWidth="200.0" prefWrapLength="250.0">
+                                            <children>
+                                                <Button mnemonicParsing="false" onAction="#onAddSchedule"
+                                                        text="Add Schedule"/>
+                                            </children>
+                                        </FlowPane>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                        <VBox fillWidth="false" spacing="5.0">
+                            <children>
+                                <FlowPane prefWrapLength="200.0">
+                                    <children>
+                                        <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../images/users/calendar.png"/>
+                                            </image>
+                                            <FlowPane.margin>
+                                                <Insets right="5.0"/>
+                                            </FlowPane.margin>
+                                        </ImageView>
+                                        <Label text="Schedules"/>
+                                    </children>
+                                </FlowPane>
+                                <TableView fx:id="tableSchedules" prefHeight="150.0" prefWidth="230.0"
+                                           VBox.vgrow="ALWAYS">
+                                    <columns>
+                                        <TableColumn fx:id="columnDate" editable="false" maxWidth="130.0"
+                                                     minWidth="130.0" prefWidth="130.0" text="Date"/>
+                                        <TableColumn fx:id="columnStartTime" editable="false" maxWidth="100.0"
+                                                     minWidth="100.0" prefWidth="100.0" text="Start time"/>
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </VBox>
+                        <VBox alignment="BOTTOM_LEFT" spacing="20.0">
+                            <children>
+                                <FlowPane alignment="BOTTOM_LEFT" prefWrapLength="300.0">
+                                    <children>
+                                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                                minWidth="-Infinity" mnemonicParsing="false"
+                                                onAction="#onRequestService" text="Request service"/>
+                                    </children>
+                                </FlowPane>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <Label fx:id="lblWarning" styleClass="warnings-label"/>
+            </children>
+        </VBox>
+    </children>
+    <padding>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0"/>
+    </padding>
+</AnchorPane>

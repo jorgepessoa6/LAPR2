@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="240.0" prefWidth="300.0" stylesheets="@../css/usecases.css"
+            xmlns="http://javafx.com/javafx/8"
+            fx:controller="lapr2.agpsdapplication.controller.login.RolePageController">
+    <children>
+        <ImageView pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/rolesbackground.png"/>
+            </image>
+        </ImageView>
+        <BorderPane prefHeight="240.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <FlowPane alignment="TOP_CENTER" BorderPane.alignment="CENTER">
+                    <children>
+                        <ComboBox fx:id="roleComboBox" maxWidth="1.7976931348623157E308" onAction="#onSelect"
+                                  prefWidth="240.0" promptText="Select your role"/>
+                    </children>
+                    <BorderPane.margin>
+                        <Insets top="10.0"/>
+                    </BorderPane.margin>
+                </FlowPane>
+            </center>
+            <top>
+                <VBox alignment="CENTER" fillWidth="false" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label text="It looks like you have multiple roles,"/>
+                        <Label layoutX="41.0" layoutY="13.0" text="please select one..."/>
+                    </children>
+                    <BorderPane.margin>
+                        <Insets/>
+                    </BorderPane.margin>
+                </VBox>
+            </top>
+            <padding>
+                <Insets left="20.0" right="20.0" top="20.0"/>
+            </padding>
+        </BorderPane>
+    </children>
+</AnchorPane>

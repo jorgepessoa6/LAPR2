@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="700.0"
+            prefWidth="950.0" stylesheets="@../../css/usecases.css" xmlns="http://javafx.com/javafx/8"
+            fx:controller="lapr2.agpsdapplication.controller.humanresourcesofficer.ViewApplicationsController">
+    <children>
+        <VBox fillWidth="false" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <padding>
+                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0"/>
+            </padding>
+            <children>
+                <VBox fillWidth="false" spacing="5.0">
+                    <children>
+                        <FlowPane>
+                            <children>
+                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <FlowPane.margin>
+                                        <Insets right="5.0"/>
+                                    </FlowPane.margin>
+                                    <image>
+                                        <Image url="@../../images/users/candidature.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label text="Candidature"/>
+                            </children>
+                        </FlowPane>
+                        <ComboBox fx:id="candidatureComboBox" onAction="#onViewCandidature" prefWidth="250.0"/>
+                    </children>
+                </VBox>
+                <VBox fillWidth="false" spacing="5.0">
+                    <children>
+                        <FlowPane>
+                            <children>
+                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <FlowPane.margin>
+                                        <Insets right="5.0"/>
+                                    </FlowPane.margin>
+                                    <image>
+                                        <Image url="@../../images/users/description.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label text="Tax identification number"/>
+                            </children>
+                        </FlowPane>
+                        <TextField fx:id="txtTaxIdentificationNumber" editable="false" prefWidth="250.0"/>
+                    </children>
+                </VBox>
+                <VBox fillWidth="false" spacing="5.0">
+                    <children>
+                        <FlowPane>
+                            <children>
+                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <FlowPane.margin>
+                                        <Insets right="5.0"/>
+                                    </FlowPane.margin>
+                                    <image>
+                                        <Image url="@../../images/users/description.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label text="Full name"/>
+                            </children>
+                        </FlowPane>
+                        <TextField fx:id="txtFullName" editable="false" prefWidth="250.0"/>
+                    </children>
+                </VBox>
+                <VBox fillWidth="false" spacing="5.0">
+                    <children>
+                        <FlowPane>
+                            <children>
+                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <FlowPane.margin>
+                                        <Insets right="5.0"/>
+                                    </FlowPane.margin>
+                                    <image>
+                                        <Image url="@../../images/users/phone.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label text="Phone number"/>
+                            </children>
+                        </FlowPane>
+                        <TextField fx:id="txtPhoneNumber" editable="false" prefWidth="250.0"/>
+                    </children>
+                </VBox>
+                <VBox fillWidth="false" spacing="5.0">
+                    <children>
+                        <FlowPane>
+                            <children>
+                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <FlowPane.margin>
+                                        <Insets right="5.0"/>
+                                    </FlowPane.margin>
+                                    <image>
+                                        <Image url="@../../images/users/email.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label text="Email"/>
+                            </children>
+                        </FlowPane>
+                        <TextField fx:id="txtEmail" editable="false" prefWidth="250.0"/>
+                    </children>
+                </VBox>
+                <VBox fillWidth="false" spacing="5.0">
+                    <children>
+                        <FlowPane prefWrapLength="350.0">
+                            <children>
+                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <FlowPane.margin>
+                                        <Insets right="5.0"/>
+                                    </FlowPane.margin>
+                                    <image>
+                                        <Image url="@../../images/users/address.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label text="Address"/>
+                            </children>
+                        </FlowPane>
+                        <HBox fillHeight="false" spacing="10.0">
+                            <children>
+                                <TextField fx:id="txtAddress" editable="false" prefWidth="250.0" HBox.hgrow="ALWAYS"/>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <VBox fillWidth="false" spacing="5.0">
+                    <children>
+                        <FlowPane prefWrapLength="350.0">
+                            <children>
+                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <FlowPane.margin>
+                                        <Insets right="5.0"/>
+                                    </FlowPane.margin>
+                                    <image>
+                                        <Image url="@../../images/users/zipcode.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label text="Postcode"/>
+                            </children>
+                        </FlowPane>
+                        <HBox fillHeight="false" spacing="10.0">
+                            <children>
+                                <TextField fx:id="txtPostcode" editable="false" prefWidth="250.0" HBox.hgrow="ALWAYS"/>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <FlowPane>
+                    <children>
+                        <HBox prefHeight="220.0" spacing="10.0">
+                            <children>
+                                <VBox spacing="5.0">
+                                    <children>
+                                        <FlowPane prefWrapLength="300.0">
+                                            <children>
+                                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                    <FlowPane.margin>
+                                                        <Insets right="5.0"/>
+                                                    </FlowPane.margin>
+                                                    <image>
+                                                        <Image url="@../../images/users/academic.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Label text=" Academic Qualification"/>
+                                            </children>
+                                        </FlowPane>
+                                        <TableView fx:id="academicQualificationTableView" prefWidth="360.0">
+                                            <columns>
+                                                <TableColumn fx:id="degreeColumn" editable="false" maxWidth="100.0"
+                                                             minWidth="100.0" prefWidth="100.0" resizable="false"
+                                                             text="Degree"/>
+                                                <TableColumn fx:id="designationColumn" editable="false" maxWidth="160.0"
+                                                             minWidth="160.0" prefWidth="160.0" resizable="false"
+                                                             text="Designation"/>
+                                                <TableColumn fx:id="classificationColumn" editable="false"
+                                                             maxWidth="100.0" minWidth="100.0" prefWidth="100.0"
+                                                             resizable="false" text="Classification"/>
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </VBox>
+                                <VBox spacing="5.0">
+                                    <children>
+                                        <FlowPane prefHeight="200.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                    <FlowPane.margin>
+                                                        <Insets right="5.0"/>
+                                                    </FlowPane.margin>
+                                                    <image>
+                                                        <Image url="@../../images/users/professional.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Label text="Professional Qualification">
+                                                    <FlowPane.margin>
+                                                        <Insets/>
+                                                    </FlowPane.margin>
+                                                </Label>
+                                            </children>
+                                        </FlowPane>
+                                        <TableView fx:id="professionalQualificationTableView" prefWidth="200.0">
+                                            <columns>
+                                                <TableColumn fx:id="descriptionColumn" editable="false" maxWidth="200.0"
+                                                             minWidth="200.0" prefWidth="200.0" resizable="false"
+                                                             text="Description"/>
+                                            </columns>
+                                            <HBox.margin>
+                                                <Insets/>
+                                            </HBox.margin>
+                                        </TableView>
+                                    </children>
+                                </VBox>
+                                <VBox spacing="5.0">
+                                    <children>
+                                        <FlowPane prefHeight="200.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                    <FlowPane.margin>
+                                                        <Insets right="5.0"/>
+                                                    </FlowPane.margin>
+                                                    <image>
+                                                        <Image url="@../../images/users/category.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Label text=" Category"/>
+                                            </children>
+                                        </FlowPane>
+                                        <TableView fx:id="categoryTableView" prefWidth="260.0">
+                                            <columns>
+                                                <TableColumn fx:id="uniqueIdentifierCategoryColumn" editable="false"
+                                                             maxWidth="120.0" minWidth="120.0" prefWidth="120.0"
+                                                             resizable="false" text="Unique identifier"/>
+                                                <TableColumn fx:id="descriptionCategoryColumn" editable="false"
+                                                             maxWidth="140.0" minWidth="140.0" prefWidth="140.0"
+                                                             resizable="false" text="Description"/>
+                                            </columns>
+                                            <HBox.margin>
+                                                <Insets/>
+                                            </HBox.margin>
+                                        </TableView>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </FlowPane>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

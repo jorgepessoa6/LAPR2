@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="700.0" prefWidth="950.0"
+            stylesheets="@../../css/homepage.css" xmlns="http://javafx.com/javafx/8"
+            fx:controller="lapr2.agpsdapplication.controller.humanresourcesofficer.HomePageController">
+    <padding>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0"/>
+    </padding>
+    <VBox prefHeight="700.0" prefWidth="950.0" spacing="30.0" AnchorPane.bottomAnchor="0.0"
+          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <HBox prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+            <AnchorPane layoutX="800.0" layoutY="10.0" prefHeight="185.0" prefWidth="309.0"
+                        styleClass="info-pane" HBox.hgrow="ALWAYS">
+                <VBox prefHeight="210.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0"
+                      AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                      AnchorPane.topAnchor="0.0">
+                    <FlowPane alignment="CENTER" styleClass="info-pane-title">
+                        <ImageView fitHeight="150.0" fitWidth="20.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <Image url="@../../images/users/profile.png"/>
+                        </ImageView>
+                        <Label text=" Service Providers"/>
+                    </FlowPane>
+                    <AnchorPane styleClass="info-pane-content">
+                        <padding>
+                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                        </padding>
+                        <VBox prefHeight="200.0" prefWidth="379.0" spacing="5.0"
+                              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <FlowPane>
+                                <ImageView fitWidth="20.0" pickOnBounds="true"
+                                           preserveRatio="true">
+                                    <Image url="@../../images/users/userlist.png"/>
+                                </ImageView>
+                                <Label fx:id="serviceProviderCountLabel"
+                                       text="0 service providers"/>
+                            </FlowPane>
+                            <FlowPane layoutX="10.0" layoutY="10.0">
+                                <VBox.margin>
+                                    <Insets top="15.0"/>
+                                </VBox.margin>
+                                <ImageView fitWidth="20.0" pickOnBounds="true"
+                                           preserveRatio="true">
+                                    <Image url="@../../images/users/itemtag.png"/>
+                                </ImageView>
+                                <Label fx:id="firstServiceProviderLabel"
+                                       text="1st service provider"/>
+                            </FlowPane>
+                            <FlowPane layoutX="10.0" layoutY="30.0">
+                                <ImageView fitWidth="20.0" pickOnBounds="true"
+                                           preserveRatio="true">
+                                    <Image url="@../../images/users/itemtag.png"/>
+                                </ImageView>
+                                <Label fx:id="secondServiceProviderLabel"
+                                       text="2nd service provider"/>
+                            </FlowPane>
+                            <FlowPane layoutX="10.0" layoutY="50.0">
+                                <ImageView fitWidth="20.0" pickOnBounds="true"
+                                           preserveRatio="true">
+                                    <Image url="@../../images/users/itemtag.png"/>
+                                </ImageView>
+                                <Label fx:id="thirdServiceProviderLabel"
+                                       text="3rd service provider"/>
+                            </FlowPane>
+                            <FlowPane layoutX="10.0" layoutY="70.0">
+                                <Label onMouseClicked="#onViewServiceProviders"
+                                       text="Click here to view more">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND"/>
+                                    </cursor>
+                                    <font>
+                                        <Font name="System Bold" size="12.0"/>
+                                    </font>
+                                </Label>
+                            </FlowPane>
+                        </VBox>
+                    </AnchorPane>
+                </VBox>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0" styleClass="info-pane" HBox.hgrow="ALWAYS">
+                <VBox prefHeight="210.0" prefWidth="279.0" AnchorPane.bottomAnchor="0.0"
+                      AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                      AnchorPane.topAnchor="0.0">
+                    <FlowPane alignment="CENTER" styleClass="info-pane-title">
+                        <ImageView fitHeight="150.0" fitWidth="20.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <Image url="@../../images/users/candidature.png"/>
+                        </ImageView>
+                        <Label text="Applications"/>
+                    </FlowPane>
+                    <AnchorPane styleClass="info-pane-content">
+                        <padding>
+                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                        </padding>
+                        <VBox prefHeight="155.0" prefWidth="340.0" spacing="5.0"
+                              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <FlowPane>
+                                <ImageView fitWidth="20.0" pickOnBounds="true"
+                                           preserveRatio="true">
+                                    <Image url="@../../images/users/category.png"/>
+                                </ImageView>
+                                <Label fx:id="applicationCountLabel"
+                                       text="0 applications"/>
+                            </FlowPane>
+                            <FlowPane layoutX="10.0" layoutY="10.0">
+                                <VBox.margin>
+                                    <Insets top="15.0"/>
+                                </VBox.margin>
+                                <ImageView fitWidth="20.0" pickOnBounds="true"
+                                           preserveRatio="true">
+                                    <Image url="@../../images/users/itemtag.png"/>
+                                </ImageView>
+                                <Label fx:id="firstApplicationLabel"
+                                       text="1st application"/>
+                            </FlowPane>
+                            <FlowPane layoutX="10.0" layoutY="30.0">
+                                <ImageView fitWidth="20.0" pickOnBounds="true"
+                                           preserveRatio="true">
+                                    <Image url="@../../images/users/itemtag.png"/>
+                                </ImageView>
+                                <Label fx:id="secondApplicationLabel"
+                                       text="2nd application"/>
+                            </FlowPane>
+                            <FlowPane layoutX="10.0" layoutY="50.0">
+                                <ImageView fitWidth="20.0" pickOnBounds="true"
+                                           preserveRatio="true">
+                                    <Image url="@../../images/users/itemtag.png"/>
+                                </ImageView>
+                                <Label fx:id="thirdApplicationLabel"
+                                       text="3rd application"/>
+                            </FlowPane>
+                            <FlowPane layoutX="10.0" layoutY="70.0">
+                                <Label onMouseClicked="#onViewApplications"
+                                       text="Click here to view more">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND"/>
+                                    </cursor>
+                                    <font>
+                                        <Font name="System Bold" size="12.0"/>
+                                    </font>
+                                </Label>
+                            </FlowPane>
+                        </VBox>
+                    </AnchorPane>
+                </VBox>
+            </AnchorPane>
+        </HBox>
+    </VBox>
+</AnchorPane>

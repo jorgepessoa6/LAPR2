@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="700.0" prefWidth="950.0"
+            stylesheets="@../../css/usecases.css" xmlns="http://javafx.com/javafx/8"
+            fx:controller="lapr2.agpsdapplication.controller.humanresourcesofficer.RegisterServiceProviderController">
+    <children>
+        <VBox prefHeight="700.0" prefWidth="950.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox fillHeight="false">
+                    <children>
+                        <VBox spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <VBox spacing="5.0">
+                                    <children>
+                                        <FlowPane>
+                                            <children>
+                                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../images/users/description.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Label text=" Tax identification number"/>
+                                            </children>
+                                        </FlowPane>
+                                        <TextField fx:id="txtTaxIdentificationNumber" maxHeight="-Infinity"
+                                                   maxWidth="-Infinity" prefWidth="300.0" promptText="e.g. 255716782">
+                                            <VBox.margin>
+                                                <Insets/>
+                                            </VBox.margin>
+                                        </TextField>
+                                    </children>
+                                </VBox>
+                                <VBox spacing="5.0">
+                                    <children>
+                                        <FlowPane>
+                                            <children>
+                                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../images/users/description.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Label text=" Mechanographical number"/>
+                                            </children>
+                                        </FlowPane>
+                                        <TextField fx:id="txtMechanographicalNumber" maxHeight="-Infinity"
+                                                   maxWidth="-Infinity" prefWidth="300.0" promptText="e.g. 1882529">
+                                            <VBox.margin>
+                                                <Insets top="5.0"/>
+                                            </VBox.margin>
+                                        </TextField>
+                                    </children>
+                                </VBox>
+                                <VBox spacing="5.0">
+                                    <children>
+                                        <FlowPane>
+                                            <children>
+                                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../images/users/description.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Label text=" Full Name"/>
+                                            </children>
+                                        </FlowPane>
+                                        <TextField fx:id="txtFullName" maxHeight="-Infinity" maxWidth="-Infinity"
+                                                   prefWidth="300.0" promptText="e.g. Will John Smith">
+                                            <VBox.margin>
+                                                <Insets top="5.0"/>
+                                            </VBox.margin>
+                                        </TextField>
+                                    </children>
+                                </VBox>
+                                <VBox spacing="5.0">
+                                    <children>
+                                        <FlowPane>
+                                            <children>
+                                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../images/users/description.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Label text=" Abbreviated Name"/>
+                                            </children>
+                                        </FlowPane>
+                                        <TextField fx:id="txtAbbreviatedName" maxHeight="-Infinity" maxWidth="-Infinity"
+                                                   prefWidth="300.0" promptText="e.g. Will Smith">
+                                            <VBox.margin>
+                                                <Insets top="5.0"/>
+                                            </VBox.margin>
+                                        </TextField>
+                                    </children>
+                                </VBox>
+                                <VBox spacing="5.0">
+                                    <children>
+                                        <FlowPane>
+                                            <children>
+                                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../images/users/email.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Label text=" Email"/>
+                                            </children>
+                                        </FlowPane>
+                                        <TextField fx:id="txtEmail" maxHeight="-Infinity" maxWidth="-Infinity"
+                                                   prefWidth="300.0" promptText="e.g. will@flow.pt">
+                                            <VBox.margin>
+                                                <Insets top="5.0"/>
+                                            </VBox.margin>
+                                        </TextField>
+                                    </children>
+                                </VBox>
+                                <VBox spacing="5.0">
+                                    <children>
+                                        <FlowPane>
+                                            <children>
+                                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../images/users/zipcode.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Label text=" Postcode"/>
+                                            </children>
+                                        </FlowPane>
+                                        <TextField fx:id="txtPostCodeStr" maxHeight="-Infinity" maxWidth="-Infinity"
+                                                   prefWidth="300.0" promptText="e.g. 4575-446">
+                                            <VBox.margin>
+                                                <Insets top="5.0"/>
+                                            </VBox.margin>
+                                        </TextField>
+                                    </children>
+                                </VBox>
+                                <VBox spacing="5.0">
+                                    <children>
+                                        <FlowPane>
+                                            <children>
+                                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../images/users/category.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Label text=" Category"/>
+                                            </children>
+                                        </FlowPane>
+                                        <ComboBox fx:id="categoryComboBox" maxHeight="-Infinity" maxWidth="-Infinity"
+                                                  prefWidth="300.0" promptText="Category">
+                                            <VBox.margin>
+                                                <Insets/>
+                                            </VBox.margin>
+                                        </ComboBox>
+                                        <Button fx:id="btnAddCategoryButton" mnemonicParsing="false"
+                                                onAction="#onAddCategory" text="Add category">
+                                            <VBox.margin>
+                                                <Insets top="5.0"/>
+                                            </VBox.margin>
+                                        </Button>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets/>
+                                    </VBox.margin>
+                                </VBox>
+                                <VBox spacing="5.0">
+                                    <children>
+                                        <FlowPane>
+                                            <children>
+                                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../images/users/category.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Label text=" Geographical Area"/>
+                                            </children>
+                                        </FlowPane>
+                                        <ComboBox fx:id="geographicalAreaComboBox" maxHeight="-Infinity"
+                                                  maxWidth="-Infinity" prefWidth="300.0" promptText="Geographical area">
+                                            <VBox.margin>
+                                                <Insets/>
+                                            </VBox.margin>
+                                        </ComboBox>
+                                        <Button fx:id="btnAddGeographicalAreaButton" mnemonicParsing="false"
+                                                onAction="#onAddGeographicalArea" text="Add geographical area">
+                                            <VBox.margin>
+                                                <Insets top="5.0"/>
+                                            </VBox.margin>
+                                        </Button>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                        <VBox fillWidth="false" spacing="30.0">
+                            <children>
+                                <TableView fx:id="categoryTableView" prefWidth="360.0" VBox.vgrow="ALWAYS">
+                                    <columns>
+                                        <TableColumn fx:id="idColumn" editable="false" maxWidth="180.0" minWidth="180.0"
+                                                     prefWidth="180.0" resizable="false" text="Unique identifier"/>
+                                        <TableColumn fx:id="descriptionColumn" editable="false" maxWidth="180.0"
+                                                     minWidth="180.0" prefWidth="180.0" resizable="false"
+                                                     text="Description"/>
+                                    </columns>
+                                    <VBox.margin>
+                                        <Insets top="20.0"/>
+                                    </VBox.margin>
+                                </TableView>
+                                <TableView fx:id="geographicalAreaTableView" prefWidth="360.0" VBox.vgrow="ALWAYS">
+                                    <columns>
+                                        <TableColumn fx:id="designationColumn" editable="false" maxWidth="150.0"
+                                                     minWidth="150.0" prefWidth="150.0" resizable="false"
+                                                     text="Designation"/>
+                                        <TableColumn fx:id="postcodeColumn" editable="false" maxWidth="105.0"
+                                                     minWidth="105.0" prefWidth="105.0" resizable="false"
+                                                     text="Postcode"/>
+                                        <TableColumn fx:id="radiusColumn" editable="false" maxWidth="105.0"
+                                                     minWidth="105.0" prefWidth="105.0" resizable="false"
+                                                     text="Radius"/>
+                                    </columns>
+                                </TableView>
+                                <FlowPane alignment="CENTER" prefWidth="360.0">
+                                    <children>
+                                        <Label fx:id="warningsLabel" styleClass="warnings-label"/>
+                                    </children>
+                                </FlowPane>
+                                <FlowPane alignment="CENTER" layoutX="10.0" layoutY="620.0" prefWidth="360.0">
+                                    <children>
+                                        <Button mnemonicParsing="false" onAction="#onRegisterServiceProvider"
+                                                text="Register service provider"/>
+                                    </children>
+                                </FlowPane>
+                            </children>
+                            <HBox.margin>
+                                <Insets/>
+                            </HBox.margin>
+                        </VBox>
+                        <VBox layoutX="20.0" layoutY="20.0" AnchorPane.rightAnchor="30.0">
+                            <children>
+                                <Button fx:id="btnRemoveCategory" mnemonicParsing="false" onAction="#onRemoveCategory"
+                                        text="Remove">
+                                    <VBox.margin>
+                                        <Insets top="110.0"/>
+                                    </VBox.margin>
+                                </Button>
+                                <Button fx:id="btnRemoveGeographicalArea" mnemonicParsing="false"
+                                        onAction="#onRemoveGeographicalArea" text="Remove">
+                                    <VBox.margin>
+                                        <Insets top="270.0"/>
+                                    </VBox.margin>
+                                </Button>
+                            </children>
+                            <HBox.margin>
+                                <Insets left="60.0"/>
+                            </HBox.margin>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0"/>
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>

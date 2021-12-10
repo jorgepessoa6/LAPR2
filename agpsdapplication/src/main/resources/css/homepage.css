@@ -1,0 +1,51 @@
+.info-pane {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 20, 0, 0, 0);
+}
+
+.info-pane-title {
+    -fx-background-color: rgba(0, 0, 0, 0.3);
+}
+
+.info-pane-title .label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-label-padding: 5px;
+}
+
+.info-pane-content {
+    -fx-background-color: rgba(0, 0, 0, 0.1);
+}
+
+.info-pane-content .label {
+    -fx-label-padding: 0px 0px 0px 5px;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+}
+
+.chart {
+    -fx-clockwise: false;
+    -fx-pie-label-visible: true;
+    -fx-start-angle: 30;
+    -fx-legend-visible: false;
+}
+
+.chart-pie {
+    -fx-background-insets: 0;
+    -fx-border-width: 0;
+}
+
+.chart-pie-label-line {
+    -fx-fill: white;
+}
+
+.chart-pie-label {
+    -fx-fill: white;
+}
+
+.chart .label {
+    -fx-text-fill: white;
+}
+
+.char-legend .label {
+    -fx-text-fill: white;
+}

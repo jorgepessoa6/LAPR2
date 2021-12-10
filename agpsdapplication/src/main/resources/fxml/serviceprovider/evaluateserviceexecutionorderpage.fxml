@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="700.0" prefWidth="950.0"
+            stylesheets="@../../css/usecases.css" xmlns="http://javafx.com/javafx/8"
+            fx:controller="lapr2.agpsdapplication.controller.serviceprovider.EvaluateServiceExecutionOrderController">
+    <children>
+        <VBox layoutX="20.0" layoutY="20.0" prefHeight="700.0" prefWidth="950.0" spacing="10.0"
+              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+              AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox spacing="5.0">
+                    <children>
+                        <FlowPane>
+                            <children>
+                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/users/service.png"/>
+                                    </image>
+                                    <FlowPane.margin>
+                                        <Insets right="5.0"/>
+                                    </FlowPane.margin>
+                                </ImageView>
+                                <Label text="Service Execution Order"/>
+                            </children>
+                        </FlowPane>
+                        <ComboBox fx:id="serviceComboBox" prefWidth="300.0"/>
+                    </children>
+                </VBox>
+                <VBox spacing="5.0">
+                    <children>
+                        <FlowPane>
+                            <children>
+                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/users/description.png"/>
+                                    </image>
+                                    <FlowPane.margin>
+                                        <Insets right="5.0"/>
+                                    </FlowPane.margin>
+                                </ImageView>
+                                <Label text="Issue description"/>
+                            </children>
+                        </FlowPane>
+                        <TextField fx:id="txtIssueDescription" maxHeight="-Infinity" maxWidth="-Infinity"
+                                   prefWidth="300.0" promptText="Issue description">
+                            <VBox.margin>
+                                <Insets top="5.0"/>
+                            </VBox.margin>
+                        </TextField>
+                    </children>
+                </VBox>
+                <VBox spacing="5.0">
+                    <children>
+                        <FlowPane>
+                            <children>
+                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/users/description.png"/>
+                                    </image>
+                                    <FlowPane.margin>
+                                        <Insets right="5.0"/>
+                                    </FlowPane.margin>
+                                </ImageView>
+                                <Label text="Troubleshooting description"/>
+                            </children>
+                        </FlowPane>
+                        <TextField fx:id="txtTroubleshootingDescription" maxHeight="-Infinity" maxWidth="-Infinity"
+                                   prefWidth="300.0" promptText="Troubleshooting description">
+                            <VBox.margin>
+                                <Insets top="5.0"/>
+                            </VBox.margin>
+                        </TextField>
+                    </children>
+                </VBox>
+                <VBox spacing="5.0">
+                    <children>
+                        <FlowPane>
+                            <children>
+                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/users/description.png"/>
+                                    </image>
+                                    <FlowPane.margin>
+                                        <Insets right="5.0"/>
+                                    </FlowPane.margin>
+                                </ImageView>
+                                <Label text="How the service ran?"/>
+                            </children>
+                        </FlowPane>
+                        <ComboBox fx:id="evaluationComboBox" prefWidth="300.0"/>
+                    </children>
+                </VBox>
+                <VBox spacing="10.0">
+                    <VBox.margin>
+                        <Insets top="10.0"/>
+                    </VBox.margin>
+                    <children>
+                        <FlowPane>
+                            <VBox.margin>
+                                <Insets top="20.0"/>
+                            </VBox.margin>
+                            <children>
+                                <Label fx:id="warningsLabel" styleClass="warnings-label">
+                                    <FlowPane.margin>
+                                        <Insets/>
+                                    </FlowPane.margin>
+                                </Label>
+                            </children>
+                        </FlowPane>
+                        <Button fx:id="btnEvaluate" mnemonicParsing="false" onAction="#onEvaluate" prefWidth="300.0"
+                                text="Evaluate">
+                            <VBox.margin>
+                                <Insets/>
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+            <padding>
+                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0"/>
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>

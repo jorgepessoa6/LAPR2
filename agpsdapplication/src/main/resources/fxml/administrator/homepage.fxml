@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="700.0" prefWidth="950.0"
+            stylesheets="@../../css/homepage.css" xmlns="http://javafx.com/javafx/8"
+            fx:controller="lapr2.agpsdapplication.controller.administrator.HomePageController">
+    <padding>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0"/>
+    </padding>
+    <children>
+        <VBox prefHeight="700.0" prefWidth="950.0" spacing="30.0" AnchorPane.bottomAnchor="0.0"
+              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <HBox prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                    <children>
+                        <AnchorPane prefHeight="185.0" prefWidth="231.0" styleClass="info-pane" HBox.hgrow="ALWAYS">
+                            <children>
+                                <VBox prefHeight="185.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0"
+                                      AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                      AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <FlowPane alignment="CENTER" styleClass="info-pane-title">
+                                            <children>
+                                                <ImageView fitHeight="150.0" fitWidth="20.0" pickOnBounds="true"
+                                                           preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../images/users/profile.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Label text="Users"/>
+                                            </children>
+                                        </FlowPane>
+                                        <AnchorPane styleClass="info-pane-content">
+                                            <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                                            </padding>
+                                            <children>
+                                                <VBox prefHeight="155.0" prefWidth="200.0" spacing="5.0"
+                                                      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                                      AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <children>
+                                                        <FlowPane>
+                                                            <children>
+                                                                <ImageView fitWidth="20.0" pickOnBounds="true"
+                                                                           preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../../images/users/userlist.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <Label fx:id="userCountLabel" text="0 users"/>
+                                                            </children>
+                                                        </FlowPane>
+                                                        <FlowPane layoutX="10.0" layoutY="10.0">
+                                                            <children>
+                                                                <ImageView fitWidth="20.0" pickOnBounds="true"
+                                                                           preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../../images/users/userlist.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <Label fx:id="serviceProviderCountLabel"
+                                                                       text="0 service providers"/>
+                                                            </children>
+                                                            <VBox.margin>
+                                                                <Insets top="15.0"/>
+                                                            </VBox.margin>
+                                                        </FlowPane>
+                                                        <FlowPane layoutX="10.0" layoutY="30.0">
+                                                            <children>
+                                                                <ImageView fitWidth="20.0" pickOnBounds="true"
+                                                                           preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../../images/users/userlist.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <Label fx:id="administratorCountLabel"
+                                                                       text="0 administrators"/>
+                                                            </children>
+                                                        </FlowPane>
+                                                        <FlowPane layoutX="10.0" layoutY="50.0">
+                                                            <children>
+                                                                <ImageView fitWidth="20.0" pickOnBounds="true"
+                                                                           preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../../images/users/userlist.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <Label fx:id="clientCountLabel" text="0 clients"/>
+                                                            </children>
+                                                        </FlowPane>
+                                                        <FlowPane layoutX="10.0" layoutY="70.0">
+                                                            <children>
+                                                                <ImageView fitWidth="20.0" pickOnBounds="true"
+                                                                           preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../../images/users/userlist.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <Label fx:id="humanResourcesOfficerCountLabel"
+                                                                       text="0 human resources officers"/>
+                                                            </children>
+                                                        </FlowPane>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="10.0" layoutY="10.0" styleClass="info-pane" HBox.hgrow="ALWAYS">
+                            <children>
+                                <VBox prefHeight="210.0" prefWidth="279.0" AnchorPane.bottomAnchor="0.0"
+                                      AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                      AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <FlowPane alignment="CENTER" styleClass="info-pane-title">
+                                            <children>
+                                                <ImageView fitHeight="150.0" fitWidth="20.0" pickOnBounds="true"
+                                                           preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../images/users/category.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Label text="Categories"/>
+                                            </children>
+                                        </FlowPane>
+                                        <AnchorPane styleClass="info-pane-content">
+                                            <children>
+                                                <VBox prefHeight="155.0" prefWidth="340.0" spacing="5.0"
+                                                      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                                      AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <children>
+                                                        <FlowPane>
+                                                            <children>
+                                                                <ImageView fitWidth="20.0" pickOnBounds="true"
+                                                                           preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../../images/users/category.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <Label fx:id="categoryCountLabel" text="0 categories"/>
+                                                            </children>
+                                                        </FlowPane>
+                                                        <FlowPane layoutX="10.0" layoutY="10.0">
+                                                            <children>
+                                                                <ImageView fitWidth="20.0" pickOnBounds="true"
+                                                                           preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../../images/users/itemtag.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <Label fx:id="firstCategoryLabel" text="1st category"/>
+                                                            </children>
+                                                            <VBox.margin>
+                                                                <Insets top="15.0"/>
+                                                            </VBox.margin>
+                                                        </FlowPane>
+                                                        <FlowPane layoutX="10.0" layoutY="30.0">
+                                                            <children>
+                                                                <ImageView fitWidth="20.0" pickOnBounds="true"
+                                                                           preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../../images/users/itemtag.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <Label fx:id="secondCategoryLabel" text="2nd category"/>
+                                                            </children>
+                                                        </FlowPane>
+                                                        <FlowPane layoutX="10.0" layoutY="50.0">
+                                                            <children>
+                                                                <ImageView fitWidth="20.0" pickOnBounds="true"
+                                                                           preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../../images/users/itemtag.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <Label fx:id="thirdCategoryLabel" text="3rd category"/>
+                                                            </children>
+                                                        </FlowPane>
+                                                        <FlowPane layoutX="10.0" layoutY="70.0">
+                                                            <children>
+                                                                <Label onMouseClicked="#onViewCategories"
+                                                                       text="Click here to view more">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="12.0"/>
+                                                                    </font>
+                                                                    <cursor>
+                                                                        <Cursor fx:constant="HAND"/>
+                                                                    </cursor>
+                                                                </Label>
+                                                            </children>
+                                                        </FlowPane>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                            <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                                            </padding>
+                                        </AnchorPane>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="800.0" layoutY="10.0" prefHeight="185.0" prefWidth="309.0"
+                                    styleClass="info-pane" HBox.hgrow="ALWAYS">
+                            <children>
+                                <VBox prefHeight="210.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0"
+                                      AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                      AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <FlowPane alignment="CENTER" styleClass="info-pane-title">
+                                            <children>
+                                                <ImageView fitHeight="150.0" fitWidth="20.0" pickOnBounds="true"
+                                                           preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../images/users/globe.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Label text="Geographical Areas"/>
+                                            </children>
+                                        </FlowPane>
+                                        <AnchorPane styleClass="info-pane-content">
+                                            <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                                            </padding>
+                                            <children>
+                                                <VBox prefHeight="200.0" prefWidth="379.0" spacing="5.0"
+                                                      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                                      AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <children>
+                                                        <FlowPane>
+                                                            <children>
+                                                                <ImageView fitWidth="20.0" pickOnBounds="true"
+                                                                           preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../../images/users/category.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <Label fx:id="geographicalAreasCountLabel"
+                                                                       text="0 geographical areas"/>
+                                                            </children>
+                                                        </FlowPane>
+                                                        <FlowPane layoutX="10.0" layoutY="10.0">
+                                                            <children>
+                                                                <ImageView fitWidth="20.0" pickOnBounds="true"
+                                                                           preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../../images/users/itemtag.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <Label fx:id="firstGeographicalAreaLabel"
+                                                                       text="1st geographical area"/>
+                                                            </children>
+                                                            <VBox.margin>
+                                                                <Insets top="15.0"/>
+                                                            </VBox.margin>
+                                                        </FlowPane>
+                                                        <FlowPane layoutX="10.0" layoutY="30.0">
+                                                            <children>
+                                                                <ImageView fitWidth="20.0" pickOnBounds="true"
+                                                                           preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../../images/users/itemtag.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <Label fx:id="secondGeographicalAreaLabel"
+                                                                       text="2nd geographical area"/>
+                                                            </children>
+                                                        </FlowPane>
+                                                        <FlowPane layoutX="10.0" layoutY="50.0">
+                                                            <children>
+                                                                <ImageView fitWidth="20.0" pickOnBounds="true"
+                                                                           preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../../images/users/itemtag.png"/>
+                                                                    </image>
+                                                                </ImageView>
+                                                                <Label fx:id="thirdGeographicalAreaLabel"
+                                                                       text="3rd geographical area"/>
+                                                            </children>
+                                                        </FlowPane>
+                                                        <FlowPane layoutX="10.0" layoutY="70.0">
+                                                            <children>
+                                                                <Label onMouseClicked="#onViewGeographicalAreas"
+                                                                       text="Click here to view more">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="12.0"/>
+                                                                    </font>
+                                                                    <cursor>
+                                                                        <Cursor fx:constant="HAND"/>
+                                                                    </cursor>
+                                                                </Label>
+                                                            </children>
+                                                        </FlowPane>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </HBox>
+                <PieChart fx:id="chart" title="All time overview" VBox.vgrow="ALWAYS"/>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

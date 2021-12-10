@@ -1,0 +1,35 @@
+.content-pane {
+    -fx-background-color: white;
+}
+
+.text-field {
+    -fx-border: none;
+    -fx-background-radius: 3px;
+    -fx-background-color: rgb(245, 245, 245);
+    -fx-font-weight: 600;
+    -fx-font-size: 16px;
+}
+
+.button {
+    -fx-background-radius: 3px;
+    -fx-background-color: rgb(60, 70, 100);
+    -fx-font-weight: 700;
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+}
+
+.info-label {
+    -fx-font-size: 11px;
+}
+
+.info-label-bold {
+    -fx-font-weight: bold;
+}
+
+.warnings-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: rgb(230, 100, 85);
+}
+
+

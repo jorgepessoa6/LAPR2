@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="700.0" prefWidth="950.0"
+            stylesheets="@../../css/usecases.css" xmlns="http://javafx.com/javafx/8"
+            fx:controller="lapr2.agpsdapplication.controller.administrator.ViewCategoriesController">
+    <children>
+        <TableView fx:id="tableViewCategories" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0"
+                   AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+            <columns>
+                <TableColumn fx:id="tableColumnId" editable="false" maxWidth="200.0" minWidth="200.0" prefWidth="200.0"
+                             resizable="false" text="Unique identifier"/>
+                <TableColumn fx:id="tableColumnDescription" editable="false" maxWidth="520.0" minWidth="520.0"
+                             prefWidth="520.0" resizable="false" text="Description"/>
+                <TableColumn fx:id="tableColumnNumberServices" maxWidth="170.0" minWidth="170.0" prefWidth="170.0"
+                             resizable="false" text="Number of Services"/>
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+            </columnResizePolicy>
+        </TableView>
+    </children>
+</AnchorPane>

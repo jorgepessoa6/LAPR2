@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="700.0" prefWidth="950.0"
+            stylesheets="@../../css/usecases.css" xmlns="http://javafx.com/javafx/8"
+            fx:controller="lapr2.agpsdapplication.controller.serviceprovider.AddDailyAvailabilityController">
+    <padding>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0"/>
+    </padding>
+    <children>
+        <BorderPane prefHeight="700.0" prefWidth="950.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <VBox fillWidth="false" spacing="15.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <HBox fillHeight="false" spacing="20.0">
+                            <children>
+                                <VBox fillWidth="false" spacing="5.0">
+                                    <children>
+                                        <FlowPane prefWrapLength="200.0">
+                                            <children>
+                                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../images/users/calendar.png"/>
+                                                    </image>
+                                                    <FlowPane.margin>
+                                                        <Insets right="5.0"/>
+                                                    </FlowPane.margin>
+                                                </ImageView>
+                                                <Label text="Day"/>
+                                            </children>
+                                        </FlowPane>
+                                        <DatePicker fx:id="datePicker" editable="false" maxWidth="200.0"
+                                                    onAction="#onSelectDate" promptText="e.g. 18/11/2020"/>
+                                    </children>
+                                </VBox>
+                                <VBox fillWidth="false" layoutX="10.0" layoutY="10.0" spacing="5.0">
+                                    <children>
+                                        <FlowPane prefWrapLength="200.0">
+                                            <children>
+                                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../images/users/description.png"/>
+                                                    </image>
+                                                    <FlowPane.margin>
+                                                        <Insets right="5.0"/>
+                                                    </FlowPane.margin>
+                                                </ImageView>
+                                                <Label text="Pattern"/>
+                                            </children>
+                                        </FlowPane>
+                                        <ComboBox fx:id="cmbPattern" prefWidth="200.0" promptText="e.g. Anually"/>
+                                    </children>
+                                </VBox>
+                                <VBox fillWidth="false" layoutX="232.0" layoutY="10.0" spacing="5.0">
+                                    <children>
+                                        <FlowPane prefWrapLength="200.0">
+                                            <children>
+                                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                    <image>
+                                                        <Image url="@../../images/users/description.png"/>
+                                                    </image>
+                                                    <FlowPane.margin>
+                                                        <Insets right="5.0"/>
+                                                    </FlowPane.margin>
+                                                </ImageView>
+                                                <Label text="Repetitions"/>
+                                            </children>
+                                        </FlowPane>
+                                        <ComboBox fx:id="cmbRepetitions" prefWidth="160.0" promptText="e.g. 5"/>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                        <VBox fillWidth="false" layoutX="10.0" layoutY="220.0" spacing="5.0">
+                            <children>
+                                <FlowPane>
+                                    <children>
+                                        <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../images/users/clock.png"/>
+                                            </image>
+                                            <FlowPane.margin>
+                                                <Insets right="5.0"/>
+                                            </FlowPane.margin>
+                                        </ImageView>
+                                        <Label text="Start time"/>
+                                    </children>
+                                </FlowPane>
+                                <Slider fx:id="sliderStartTime" blockIncrement="0.5" majorTickUnit="1.0" max="24.0"
+                                        min="6.0" minorTickCount="1" prefWidth="600.0" showTickLabels="true"
+                                        showTickMarks="true" snapToTicks="true"/>
+                            </children>
+                        </VBox>
+                        <VBox fillWidth="false" layoutX="10.0" layoutY="90.0" spacing="5.0">
+                            <children>
+                                <FlowPane>
+                                    <children>
+                                        <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../images/users/clock.png"/>
+                                            </image>
+                                            <FlowPane.margin>
+                                                <Insets right="5.0"/>
+                                            </FlowPane.margin>
+                                        </ImageView>
+                                        <Label text="End time"/>
+                                    </children>
+                                </FlowPane>
+                                <Slider fx:id="sliderEndTime" blockIncrement="0.5" majorTickUnit="1.0" max="24.0"
+                                        min="6.0" minorTickCount="1" prefWidth="600.0" showTickLabels="true"
+                                        showTickMarks="true" snapToTicks="true"/>
+                            </children>
+                        </VBox>
+                        <Label fx:id="lblWarnings" styleClass="warnings-label"/>
+                    </children>
+                </VBox>
+            </top>
+            <bottom>
+                <Button mnemonicParsing="false" onAction="#onAddDailyAvailability" text="Add daily availability"
+                        BorderPane.alignment="CENTER">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Button>
+            </bottom>
+        </BorderPane>
+    </children>
+</AnchorPane>

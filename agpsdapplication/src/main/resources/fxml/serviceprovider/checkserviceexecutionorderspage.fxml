@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="700.0"
+            prefWidth="950.0" stylesheets="@../../css/usecases.css" xmlns="http://javafx.com/javafx/8"
+            fx:controller="lapr2.agpsdapplication.controller.serviceprovider.CheckServiceExecutionOrdersController">
+    <children>
+        <VBox fillWidth="false" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <padding>
+                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0"/>
+            </padding>
+            <children>
+                <VBox fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                      minWidth="-Infinity" prefWidth="500.0">
+                    <padding>
+                        <Insets bottom="10.0"/>
+                    </padding>
+                    <VBox.margin>
+                        <Insets bottom="10.0"/>
+                    </VBox.margin>
+                    <children>
+                        <FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                                  prefWidth="500.0">
+                            <children>
+                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <FlowPane.margin>
+                                        <Insets right="5.0"/>
+                                    </FlowPane.margin>
+                                    <image>
+                                        <Image url="@../../images/users/option.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label text="Please select the first and final date of the intended period">
+                                    <FlowPane.margin>
+                                        <Insets/>
+                                    </FlowPane.margin>
+                                </Label>
+                            </children>
+                        </FlowPane>
+                    </children>
+                </VBox>
+                <VBox fillWidth="false" spacing="5.0">
+                    <children>
+                        <HBox fillHeight="false" spacing="35.0">
+                            <children>
+                                <VBox spacing="5.0">
+                                    <children>
+                                        <FlowPane prefWidth="220.0" prefWrapLength="350.0">
+                                            <children>
+                                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                    <FlowPane.margin>
+                                                        <Insets right="5.0"/>
+                                                    </FlowPane.margin>
+                                                    <image>
+                                                        <Image url="@../../images/users/calendar.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Label text="Starting date"/>
+                                            </children>
+                                        </FlowPane>
+                                        <DatePicker fx:id="datePickerStartDate" editable="false" prefWidth="220.0"/>
+                                    </children>
+                                </VBox>
+                                <VBox spacing="5.0">
+                                    <children>
+                                        <FlowPane prefWrapLength="350.0">
+                                            <children>
+                                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                    <FlowPane.margin>
+                                                        <Insets right="5.0"/>
+                                                    </FlowPane.margin>
+                                                    <image>
+                                                        <Image url="@../../images/users/calendar.png"/>
+                                                    </image>
+                                                </ImageView>
+                                                <Label text="Finishing date"/>
+                                            </children>
+                                        </FlowPane>
+                                        <DatePicker fx:id="datePickerEndDate" editable="false" prefWidth="220.0"/>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <VBox fillWidth="false" spacing="5.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#onConfirmPeriod" text="Confirm period">
+                            <VBox.margin>
+                                <Insets top="5.0"/>
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                </VBox>
+                <VBox fillWidth="false" spacing="5.0">
+                    <VBox.margin>
+                        <Insets top="5.0"/>
+                    </VBox.margin>
+                    <children>
+                        <FlowPane>
+                            <children>
+                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <FlowPane.margin>
+                                        <Insets right="5.0"/>
+                                    </FlowPane.margin>
+                                    <image>
+                                        <Image url="@../../images/users/service.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label text="List of your service execution orders in the given period"/>
+                            </children>
+                        </FlowPane>
+                        <TableView fx:id="tableServiceExecutionOrders" maxHeight="-Infinity" maxWidth="-Infinity"
+                                   minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="890.0">
+                            <columns>
+                                <TableColumn fx:id="columnService" editable="false" maxWidth="100.0" minWidth="100.0"
+                                             prefWidth="100.0" resizable="false" text="Service"/>
+                                <TableColumn fx:id="columnDescription" editable="false" maxWidth="190.0"
+                                             minWidth="190.0" prefWidth="190.0" resizable="false"
+                                             text="Service description"/>
+                                <TableColumn fx:id="columnAddress" editable="false" maxWidth="200.0" minWidth="200.0"
+                                             prefWidth="200.0" resizable="false" text="Address"/>
+                                <TableColumn fx:id="columnPostcode" editable="false" maxWidth="80.0" minWidth="80.0"
+                                             resizable="false" text="Post code"/>
+                                <TableColumn fx:id="columnSchedule" editable="false" maxWidth="150.0" minWidth="150.0"
+                                             prefWidth="150.0" resizable="false" text="Schedule"/>
+                                <TableColumn fx:id="columnClient" editable="false" maxWidth="180.0" minWidth="180.0"
+                                             prefWidth="180.0" resizable="false" text="Client"/>
+                            </columns>
+                        </TableView>
+                    </children>
+                </VBox>
+                <VBox fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                      minWidth="-Infinity" prefWidth="800.0" spacing="5.0">
+                    <padding>
+                        <Insets top="5.0"/>
+                    </padding>
+                    <children>
+                        <FlowPane>
+                            <children>
+                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <FlowPane.margin>
+                                        <Insets right="5.0"/>
+                                    </FlowPane.margin>
+                                    <image>
+                                        <Image url="@../../images/users/category.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label text="If you wish to export the orders, select the file format"/>
+                            </children>
+                        </FlowPane>
+                        <HBox maxWidth="-Infinity" minWidth="-Infinity" prefWidth="800.0" spacing="10.0">
+                            <children>
+                                <ComboBox fx:id="cmbFormat" prefWidth="200.0">
+                                    <VBox.margin>
+                                        <Insets left="70.0"/>
+                                    </VBox.margin>
+                                </ComboBox>
+                                <Button mnemonicParsing="false" onAction="#onConfirmFormat" text="Confirm format">
+                                    <VBox.margin>
+                                        <Insets left="70.0"/>
+                                    </VBox.margin>
+                                </Button>
+                                <Label fx:id="lblWarning" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="450.0"
+                                       styleClass="warnings-label">
+                                    <HBox.margin>
+                                        <Insets top="5.0"/>
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

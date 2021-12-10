@@ -1,0 +1,28 @@
+.title {
+    -fx-background-color: rgba(0, 0, 0, 0.6);
+    -fx-padding: 5px;
+}
+
+.title .label {
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.content {
+    -fx-background-color: rgba(0, 0, 0, 0.3);
+}
+
+.content-text {
+    -fx-fill: white;
+    -fx-font-size: 13px;
+}
+
+.button {
+    -fx-background-color: rgba(180, 140, 45, 0.2);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 20, 0, 0, 0);
+    -fx-font-size: 13px;
+    -fx-background-radius: 0;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}

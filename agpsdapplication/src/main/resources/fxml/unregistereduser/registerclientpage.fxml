@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="700.0" prefWidth="950.0" styleClass="content-pane"
+            stylesheets="@../../css/usecases.css" xmlns="http://javafx.com/javafx/8"
+            fx:controller="lapr2.agpsdapplication.controller.unregistereduser.RegisterClientController">
+    <children>
+        <ImageView fitHeight="757.0" fitWidth="950.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../images/users/content.png"/>
+            </image>
+        </ImageView>
+        <VBox layoutX="10.0" layoutY="10.0" prefHeight="700.0" prefWidth="950.0" spacing="5.0"
+              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+              AnchorPane.topAnchor="0.0">
+            <padding>
+                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0"/>
+            </padding>
+            <children>
+                <VBox spacing="5.0">
+                    <children>
+                        <FlowPane>
+                            <children>
+                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/users/description.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label text=" Full Name"/>
+                            </children>
+                        </FlowPane>
+                        <TextField fx:id="txtFullName" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="300.0"
+                                   promptText="Full Name">
+                            <VBox.margin>
+                                <Insets top="5.0"/>
+                            </VBox.margin>
+                        </TextField>
+                    </children>
+                </VBox>
+                <VBox spacing="5.0">
+                    <children>
+                        <FlowPane>
+                            <children>
+                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/users/email.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label text=" Email"/>
+                            </children>
+                        </FlowPane>
+                        <TextField fx:id="txtEmail" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="300.0"
+                                   promptText="Email">
+                            <VBox.margin>
+                                <Insets top="5.0"/>
+                            </VBox.margin>
+                        </TextField>
+                    </children>
+                </VBox>
+                <VBox spacing="5.0">
+                    <children>
+                        <FlowPane>
+                            <children>
+                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/users/description.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label text=" Password"/>
+                            </children>
+                        </FlowPane>
+                        <PasswordField fx:id="txtPassword" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="300.0"
+                                       promptText="Password"/>
+                    </children>
+                </VBox>
+                <VBox spacing="5.0">
+                    <children>
+                        <FlowPane>
+                            <children>
+                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/users/description.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label text=" Confirm Password"/>
+                            </children>
+                        </FlowPane>
+                        <PasswordField fx:id="txtConfirmPassword" maxHeight="-Infinity" maxWidth="-Infinity"
+                                       prefWidth="300.0" promptText="Confirm Password"/>
+                    </children>
+                </VBox>
+                <VBox spacing="5.0">
+                    <children>
+                        <FlowPane>
+                            <children>
+                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/users/description.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label text=" Tax Identification Number"/>
+                            </children>
+                        </FlowPane>
+                        <TextField fx:id="txtTaxIdentificationNumber" maxHeight="-Infinity" maxWidth="-Infinity"
+                                   prefWidth="300.0" promptText="Tax Identification Number">
+                            <VBox.margin>
+                                <Insets top="5.0"/>
+                            </VBox.margin>
+                        </TextField>
+                    </children>
+                </VBox>
+                <VBox spacing="5.0">
+                    <children>
+                        <FlowPane>
+                            <children>
+                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/users/phone.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label text=" Phone Number"/>
+                            </children>
+                        </FlowPane>
+                        <TextField fx:id="txtPhoneNumber" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="300.0"
+                                   promptText="Phone Number">
+                            <VBox.margin>
+                                <Insets/>
+                            </VBox.margin>
+                        </TextField>
+                    </children>
+                </VBox>
+                <VBox spacing="5.0">
+                    <children>
+                        <FlowPane>
+                            <children>
+                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/users/zipcode.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label text=" Postcode"/>
+                            </children>
+                        </FlowPane>
+                        <TextField fx:id="txtPostCodeStr" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="300.0"
+                                   promptText="Postcode">
+                            <VBox.margin>
+                                <Insets top="5.0"/>
+                            </VBox.margin>
+                        </TextField>
+                    </children>
+                </VBox>
+                <VBox spacing="5.0">
+                    <children>
+                        <FlowPane>
+                            <children>
+                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../images/users/address.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label text=" Address"/>
+                            </children>
+                        </FlowPane>
+                        <TextField fx:id="txtAddress" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="300.0"
+                                   promptText="Address">
+                            <VBox.margin>
+                                <Insets top="5.0"/>
+                            </VBox.margin>
+                        </TextField>
+                    </children>
+                </VBox>
+                <FlowPane prefWidth="360.0">
+                    <VBox.margin>
+                        <Insets top="20.0"/>
+                    </VBox.margin>
+                    <children>
+                        <Label fx:id="warningsLabel" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="300.0"
+                               styleClass="warnings-label"/>
+                    </children>
+                </FlowPane>
+                <FlowPane hgap="30.0" prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <Button fx:id="btnRegisterClient" mnemonicParsing="false" onAction="#onRegisterClient"
+                                text="Register"/>
+                        <Button mnemonicParsing="false" onAction="#onCancel" text="Cancel"/>
+                    </children>
+                </FlowPane>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="700.0" prefWidth="950.0" stylesheets="@../../css/usecases.css"
+            xmlns="http://javafx.com/javafx/8"
+            fx:controller="lapr2.agpsdapplication.controller.client.RateServiceController">
+    <children>
+        <VBox fillWidth="false" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <padding>
+                <Insets bottom="30.0" left="30.0" right="30.0" top="30.0"/>
+            </padding>
+            <children>
+                <HBox spacing="20.0">
+                    <children>
+                        <VBox fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                              spacing="10.0">
+                            <children>
+                                <FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                          minWidth="-Infinity" prefWrapLength="300.0">
+                                    <children>
+                                        <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                            <FlowPane.margin>
+                                                <Insets right="5.0"/>
+                                            </FlowPane.margin>
+                                            <image>
+                                                <Image url="@../../images/users/service.png"/>
+                                            </image>
+                                        </ImageView>
+                                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                               minWidth="-Infinity" prefWidth="200.0"
+                                               text="List of your service requests"/>
+                                    </children>
+                                </FlowPane>
+                                <ComboBox fx:id="cmbServiceRequest" maxHeight="-Infinity" maxWidth="-Infinity"
+                                          minHeight="-Infinity" minWidth="-Infinity" onAction="#onSelectServiceRequest"
+                                          prefWidth="300.0"/>
+                            </children>
+                        </VBox>
+                        <FlowPane alignment="BOTTOM_LEFT">
+                            <children>
+                                <Button fx:id="btnSeeInvoice" mnemonicParsing="false" onAction="#onSelectSeeInvoice"
+                                        text="See invoice"/>
+                            </children>
+                        </FlowPane>
+                    </children>
+                </HBox>
+                <Label fx:id="lblWarning" styleClass="warnings-label"/>
+                <VBox fillWidth="false" spacing="5.0">
+                    <children>
+                        <FlowPane>
+                            <children>
+                                <ImageView fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <FlowPane.margin>
+                                        <Insets right="5.0"/>
+                                    </FlowPane.margin>
+                                    <image>
+                                        <Image url="@../../images/users/service.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label text="List of the request's complete service execution orders"/>
+                            </children>
+                        </FlowPane>
+                        <TableView fx:id="serviceExecutionOrderTableView" maxHeight="-Infinity" maxWidth="-Infinity"
+                                   minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="890.0">
+                            <columns>
+                                <TableColumn fx:id="serviceColumn" editable="false" maxWidth="110.0" minWidth="110.0"
+                                             prefWidth="110.0" resizable="false" text="Service"/>
+                                <TableColumn fx:id="serviceDescriptionColumn" editable="false" maxWidth="210.0"
+                                             minWidth="210.0" prefWidth="210.0" resizable="false"
+                                             text="Service description"/>
+                                <TableColumn fx:id="addressColumn" editable="false" maxWidth="200.0" minWidth="200.0"
+                                             prefWidth="200.0" resizable="false" text="Address"/>
+                                <TableColumn fx:id="postCodeColumn" editable="false" maxWidth="80.0" minWidth="80.0"
+                                             resizable="false" text="Post code"/>
+                                <TableColumn fx:id="scheduleColumn" editable="false" maxWidth="120.0" minWidth="120.0"
+                                             prefWidth="120.0" resizable="false" text="Schedule"/>
+                                <TableColumn fx:id="serviceProviderColumn" editable="false" maxWidth="170.0"
+                                             minWidth="170.0" prefWidth="170.0" resizable="false"
+                                             text="Service Provider"/>
+                            </columns>
+                        </TableView>
+                    </children>
+                </VBox>
+                <VBox fillWidth="false" spacing="20.0">
+                    <opaqueInsets>
+                        <Insets/>
+                    </opaqueInsets>
+                    <padding>
+                        <Insets top="20.0"/>
+                    </padding>
+                    <children>
+                        <FlowPane>
+                            <children>
+                                <ImageView fx:id="imageServiceRate" fitWidth="20.0" pickOnBounds="true"
+                                           preserveRatio="true">
+                                    <FlowPane.margin>
+                                        <Insets right="5.0"/>
+                                    </FlowPane.margin>
+                                    <image>
+                                        <Image url="@../../images/users/rating.png"/>
+                                    </image>
+                                </ImageView>
+                                <Label fx:id="lblServiceRate" text="Service rating"/>
+                            </children>
+                        </FlowPane>
+                        <FlowPane hgap="25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                  minWidth="-Infinity" prefHeight="50.0" prefWidth="500.0">
+                            <children>
+                                <Slider fx:id="sliderRate" blockIncrement="0.0" majorTickUnit="1.0" max="5.0"
+                                        maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                        minWidth="-Infinity" minorTickCount="0" prefHeight="20.0" prefWidth="200.0"
+                                        showTickLabels="true" showTickMarks="true" snapToTicks="true"/>
+                                <Button fx:id="btnRate" mnemonicParsing="false" onAction="#onRateService"
+                                        prefHeight="30.0" prefWidth="63.0" text="Rate"/>
+                            </children>
+                        </FlowPane>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
